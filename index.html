@@ -776,9 +776,9 @@
                 </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#" class="active" onclick="showTab('home')">🏠 Home</a></li>
-                <li><a href="#" onclick="showTab('eligibility')">✓ Eligibility</a></li>
-                <li><a href="#" onclick="showTab('documents')">📄 Documents</a></li>
+                <li><a href="#" class="nav-link active" onclick="showTab('home'); return false;">🏠 Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab('eligibility'); return false;">✓ Eligibility</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab('documents'); return false;">📄 Documents</a></li>
                 <li><a href="#">📞 Support</a></li>
             </ul>
             <div class="user-actions">
@@ -800,9 +800,9 @@
             <aside class="sidebar">
                 <h3>Quick Links</h3>
                 <ul class="sidebar-menu">
-                    <li><a href="#" class="active" onclick="showTab('home')">🏠 Dashboard</a></li>
-                    <li><a href="#" onclick="showTab('eligibility')">✓ Check Eligibility</a></li>
-                    <li><a href="#" onclick="showTab('documents')">📄 Documents</a></li>
+                    <li><a href="#" class="sidebar-link active" onclick="showTab('home'); return false;">🏠 Dashboard</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('eligibility'); return false;">✓ Check Eligibility</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('documents'); return false;">📄 Documents</a></li>
                     <li><a href="#">📋 My Applications</a></li>
                     <li><a href="#">🔔 Notifications</a></li>
                     <li><a href="#">📊 Reports</a></li>
@@ -823,7 +823,7 @@
                     <div class="portal-hero">
                         <h2>Welcome to Scheme Navigator Portal</h2>
                         <p>Your one-stop destination to discover and apply for government schemes</p>
-                        <button class="hero-btn" onclick="showTab('eligibility')">
+                        <button class="hero-btn" onclick="showTab('eligibility'); return false;">
                             Check Your Eligibility <span>→</span>
                         </button>
                     </div>
@@ -1242,9 +1242,20 @@
             // Show selected tab
             document.getElementById(tabName + '-tab').classList.add('active');
 
-            // Update navigation active state
-            document.querySelectorAll('.nav-menu a, .sidebar-menu a').forEach(link => {
+            // Update navigation active state - top nav
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
+                if (link.onclick && link.onclick.toString().includes(tabName)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Update navigation active state - sidebar
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.onclick && link.onclick.toString().includes(tabName)) {
+                    link.classList.add('active');
+                }
             });
 
             // Update breadcrumb
@@ -1260,6 +1271,9 @@
                 currentStep = 1;
                 updateEligibilityStep();
             }
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function nextStep() {
