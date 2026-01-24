@@ -779,7 +779,7 @@
                 <li><a href="#" class="nav-link active" onclick="showTab('home'); return false;">🏠 Home</a></li>
                 <li><a href="#" class="nav-link" onclick="showTab('eligibility'); return false;">✓ Eligibility</a></li>
                 <li><a href="#" class="nav-link" onclick="showTab('documents'); return false;">📄 Documents</a></li>
-                <li><a href="#">📞 Support</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab('support'); return false;">📞 Support</a></li>
             </ul>
             <div class="user-actions">
                 <select class="lang-selector">
@@ -803,11 +803,11 @@
                     <li><a href="#" class="sidebar-link active" onclick="showTab('home'); return false;">🏠 Dashboard</a></li>
                     <li><a href="#" class="sidebar-link" onclick="showTab('eligibility'); return false;">✓ Check Eligibility</a></li>
                     <li><a href="#" class="sidebar-link" onclick="showTab('documents'); return false;">📄 Documents</a></li>
-                    <li><a href="#">📋 My Applications</a></li>
-                    <li><a href="#">🔔 Notifications</a></li>
-                    <li><a href="#">📊 Reports</a></li>
-                    <li><a href="#">❓ FAQs</a></li>
-                    <li><a href="#">📞 Help Desk</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('applications'); return false;">📋 My Applications</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('notifications'); return false;">🔔 Notifications</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('reports'); return false;">📊 Reports</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('faqs'); return false;">❓ FAQs</a></li>
+                    <li><a href="#" class="sidebar-link" onclick="showTab('support'); return false;">📞 Help Desk</a></li>
                 </ul>
             </aside>
 
@@ -1180,6 +1180,215 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Support Tab -->
+                <div id="support-tab" class="tab-content">
+                    <h2 style="color: #1e40af; margin-bottom: 10px;">Support & Help Desk</h2>
+                    <p style="color: #64748b; margin-bottom: 30px;">Get assistance with scheme applications and portal usage</p>
+
+                    <div class="quick-stats">
+                        <div class="stat-box">
+                            <h3>24/7</h3>
+                            <p>Support Available</p>
+                        </div>
+                        <div class="stat-box green">
+                            <h3>1800-XXX-XXXX</h3>
+                            <p>Toll-Free Helpline</p>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                        <h3 style="font-size: 18px; margin-bottom: 20px; color: #1e40af;">Contact Methods</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                            <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 48px; margin-bottom: 15px;">📞</div>
+                                <h4 style="font-size: 16px; margin-bottom: 10px; color: #1e293b;">Phone Support</h4>
+                                <p style="color: #64748b; font-size: 14px; margin-bottom: 10px;">Toll-Free Number</p>
+                                <p style="color: #3b82f6; font-weight: 700; font-size: 18px;">1800-XXX-XXXX</p>
+                            </div>
+                            <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 48px; margin-bottom: 15px;">✉️</div>
+                                <h4 style="font-size: 16px; margin-bottom: 10px; color: #1e293b;">Email Support</h4>
+                                <p style="color: #64748b; font-size: 14px; margin-bottom: 10px;">Get help via email</p>
+                                <p style="color: #3b82f6; font-weight: 700; font-size: 16px;">support@scheme.gov.in</p>
+                            </div>
+                            <div style="background: white; padding: 25px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 48px; margin-bottom: 15px;">💬</div>
+                                <h4 style="font-size: 16px; margin-bottom: 10px; color: #1e293b;">Live Chat</h4>
+                                <p style="color: #64748b; font-size: 14px; margin-bottom: 10px;">Chat with our team</p>
+                                <button style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 10px 25px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 5px;">Start Chat</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; border: 3px solid #e2e8f0; border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+                        <h3 style="font-size: 18px; margin-bottom: 20px; color: #1e40af;">Submit a Query</h3>
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label>Your Name</label>
+                                <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="Enter your email" style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label>Query Type</label>
+                                <select style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px;">
+                                    <option>Select query type</option>
+                                    <option>Eligibility Question</option>
+                                    <option>Application Status</option>
+                                    <option>Document Help</option>
+                                    <option>Technical Issue</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label>Your Message</label>
+                                <textarea placeholder="Describe your query in detail..." style="width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; min-height: 120px; resize: vertical;"></textarea>
+                            </div>
+                            <button style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 14px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit Query</button>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b; padding: 25px; border-radius: 10px;">
+                        <h4 style="color: #92400e; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            <span>⏰</span> Support Hours
+                        </h4>
+                        <div style="color: #78350f;">
+                            <p style="margin-bottom: 10px; font-weight: 600;">Phone & Chat Support:</p>
+                            <p style="margin-bottom: 15px;">Monday - Saturday: 9:00 AM to 6:00 PM IST</p>
+                            <p style="margin-bottom: 10px; font-weight: 600;">Email Support:</p>
+                            <p>24/7 - We respond within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications Tab -->
+                <div id="applications-tab" class="tab-content">
+                    <h2 style="color: #1e40af; margin-bottom: 10px;">My Applications</h2>
+                    <p style="color: #64748b; margin-bottom: 30px;">Track and manage your scheme applications</p>
+
+                    <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 40px; text-align: center;">
+                        <div style="font-size: 64px; margin-bottom: 20px;">📋</div>
+                        <h3 style="font-size: 20px; margin-bottom: 10px; color: #1e40af;">No Applications Yet</h3>
+                        <p style="color: #64748b; margin-bottom: 25px;">Start by checking your eligibility for available schemes</p>
+                        <button onclick="showTab('eligibility'); return false;" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 14px 30px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer;">Check Eligibility Now</button>
+                    </div>
+                </div>
+
+                <!-- Notifications Tab -->
+                <div id="notifications-tab" class="tab-content">
+                    <h2 style="color: #1e40af; margin-bottom: 10px;">Notifications</h2>
+                    <p style="color: #64748b; margin-bottom: 30px;">Stay updated with important announcements and updates</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div style="background: white; border: 2px solid #e2e8f0; border-left: 4px solid #3b82f6; border-radius: 10px; padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                <h4 style="color: #1e40af; font-size: 16px;">PM-KISAN 16th Installment Released</h4>
+                                <span style="color: #64748b; font-size: 12px;">2 days ago</span>
+                            </div>
+                            <p style="color: #64748b; font-size: 14px;">The 16th installment of PM-KISAN has been released. Check your bank account for the credit.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #e2e8f0; border-left: 4px solid #10b981; border-radius: 10px; padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                <h4 style="color: #059669; font-size: 16px;">New Scholarship Applications Open</h4>
+                                <span style="color: #64748b; font-size: 12px;">5 days ago</span>
+                            </div>
+                            <p style="color: #64748b; font-size: 14px;">Post Matric Scholarship applications are now open. Apply before March 31, 2026.</p>
+                        </div>
+
+                        <div style="background: white; border: 2px solid #e2e8f0; border-left: 4px solid #f59e0b; border-radius: 10px; padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                <h4 style="color: #d97706; font-size: 16px;">e-KYC Verification Reminder</h4>
+                                <span style="color: #64748b; font-size: 12px;">1 week ago</span>
+                            </div>
+                            <p style="color: #64748b; font-size: 14px;">Complete your e-KYC verification to ensure uninterrupted benefits from all schemes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Tab -->
+                <div id="reports-tab" class="tab-content">
+                    <h2 style="color: #1e40af; margin-bottom: 10px;">Reports & Analytics</h2>
+                    <p style="color: #64748b; margin-bottom: 30px;">View reports and statistics about scheme implementations</p>
+
+                    <div class="quick-stats">
+                        <div class="stat-box">
+                            <h3>₹2.5L Cr</h3>
+                            <p>Total Benefits (2025-26)</p>
+                        </div>
+                        <div class="stat-box green">
+                            <h3>5.2M+</h3>
+                            <p>Beneficiaries</p>
+                        </div>
+                        <div class="stat-box orange">
+                            <h3>98.5%</h3>
+                            <p>Approval Rate</p>
+                        </div>
+                        <div class="stat-box purple">
+                            <h3>15 Days</h3>
+                            <p>Avg. Processing Time</p>
+                        </div>
+                    </div>
+
+                    <div style="background: white; border: 3px solid #e2e8f0; border-radius: 12px; padding: 30px;">
+                        <h3 style="font-size: 18px; margin-bottom: 20px; color: #1e40af;">Download Reports</h3>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <button style="background: #f8fafc; border: 2px solid #e2e8f0; padding: 15px 20px; border-radius: 8px; text-align: left; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+                                <span>📊 Annual Report 2025-26</span>
+                                <span style="color: #3b82f6;">Download PDF</span>
+                            </button>
+                            <button style="background: #f8fafc; border: 2px solid #e2e8f0; padding: 15px 20px; border-radius: 8px; text-align: left; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+                                <span>📈 Monthly Statistics</span>
+                                <span style="color: #3b82f6;">Download PDF</span>
+                            </button>
+                            <button style="background: #f8fafc; border: 2px solid #e2e8f0; padding: 15px 20px; border-radius: 8px; text-align: left; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+                                <span>📋 Scheme Performance Report</span>
+                                <span style="color: #3b82f6;">Download PDF</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQs Tab -->
+                <div id="faqs-tab" class="tab-content">
+                    <h2 style="color: #1e40af; margin-bottom: 10px;">Frequently Asked Questions</h2>
+                    <p style="color: #64748b; margin-bottom: 30px;">Find answers to common questions</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <details style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
+                            <summary style="font-weight: 600; color: #1e293b; cursor: pointer; font-size: 16px;">How do I check my eligibility for schemes?</summary>
+                            <p style="color: #64748b; margin-top: 15px; padding-left: 10px; line-height: 1.6;">Click on "Check Eligibility" in the navigation menu and fill out the simple 3-step form. You'll instantly see which schemes you qualify for based on your information.</p>
+                        </details>
+
+                        <details style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
+                            <summary style="font-weight: 600; color: #1e293b; cursor: pointer; font-size: 16px;">What documents do I need to apply?</summary>
+                            <p style="color: #64748b; margin-top: 15px; padding-left: 10px; line-height: 1.6;">Common documents include Aadhaar Card, Income Certificate, Caste Certificate (if applicable), Bank Account details, and Passport-size photos. Check the "Documents" section for specific requirements.</p>
+                        </details>
+
+                        <details style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
+                            <summary style="font-weight: 600; color: #1e293b; cursor: pointer; font-size: 16px;">Is this portal free to use?</summary>
+                            <p style="color: #64748b; margin-top: 15px; padding-left: 10px; line-height: 1.6;">Yes! This portal is completely free. Beware of anyone asking for money to help you access government schemes. All information and guidance is provided free of cost.</p>
+                        </details>
+
+                        <details style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
+                            <summary style="font-weight: 600; color: #1e293b; cursor: pointer; font-size: 16px;">How long does it take to process applications?</summary>
+                            <p style="color: #64748b; margin-top: 15px; padding-left: 10px; line-height: 1.6;">Processing time varies by scheme, but on average it takes 15-30 days. You can track your application status in the "My Applications" section.</p>
+                        </details>
+
+                        <details style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
+                            <summary style="font-weight: 600; color: #1e293b; cursor: pointer; font-size: 16px;">Can I apply for multiple schemes?</summary>
+                            <p style="color: #64748b; margin-top: 15px; padding-left: 10px; line-height: 1.6;">Yes! You can apply for all schemes you're eligible for. Each scheme has its own application process and requirements.</p>
+                        </details>
+
+                        <details style="background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
+                            <summary style="font-weight: 600; color: #1e293b; cursor: pointer; font-size: 16px;">What if my application is rejected?</summary>
+                            <p style="color: #64748b; margin-top: 15px; padding-left: 10px; line-height: 1.6;">You'll receive a notification with the reason for rejection. You can reapply after addressing the issues mentioned, or contact support for assistance.</p>
+                        </details>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
@@ -1262,7 +1471,12 @@
             const breadcrumbMap = {
                 'home': 'Dashboard',
                 'eligibility': 'Check Eligibility',
-                'documents': 'Document Guidance'
+                'documents': 'Document Guidance',
+                'support': 'Support & Help Desk',
+                'applications': 'My Applications',
+                'notifications': 'Notifications',
+                'reports': 'Reports & Analytics',
+                'faqs': 'FAQs'
             };
             document.getElementById('breadcrumb-current').textContent = breadcrumbMap[tabName] || 'Dashboard';
 
